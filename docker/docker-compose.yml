@@ -1,0 +1,13 @@
+services:
+  exercise_engine:
+    hostname: motion-detect
+    container_name: motion-detect
+    image: motion-detect
+    restart: always
+
+    build:
+      context: ./docker
+      dockerfile: docker-file
+
+    ports:
+      - 8585:8585
